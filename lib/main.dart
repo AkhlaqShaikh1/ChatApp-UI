@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rafay_chat_app/screens/login_screen.dart';
 import 'package:rafay_chat_app/screens/profile.dart';
+import 'package:rafay_chat_app/screens/sign_up_page.dart';
+import 'package:rafay_chat_app/screens/welcome_page.dart';
 
 import 'screens/home_page.dart';
 
@@ -18,7 +21,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       // initialRoute: HomePage.id,
       routes: {
-        "/": (context) => const HomePage(),
+        "/": (context) => const WelcomePage(),
+        LoginPage.id: (context) => const LoginPage(),
+        SignUpPage.id: (context) => const SignUpPage(),
         HomePage.id: (context) => const HomePage(),
         ProfilePage.id: (context) => const ProfilePage(),
       },

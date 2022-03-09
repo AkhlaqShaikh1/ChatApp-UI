@@ -38,52 +38,11 @@ class HomePage extends StatelessWidget {
               label: "Profile"),
         ],
       ),
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        title: Text(
-          "Conversations",
-          style: TextStyle(
-            fontFamily: GoogleFonts.lato().fontFamily,
-            color: Colors.black,
-            fontWeight: FontWeight.bold,
-            fontSize: 30,
-          ),
-        ),
-        actions: [
-          Container(
-            margin: const EdgeInsets.only(right: 15, top: 15, bottom: 15),
-            height: 300,
-            width: 90,
-            decoration: BoxDecoration(
-              color: Colors.pink[400]?.withOpacity(0.25),
-              borderRadius: BorderRadius.circular(60),
-            ),
-            child: Row(
-              children: const [
-                Padding(
-                  padding: EdgeInsets.only(left: 4),
-                  child: Icon(
-                    Icons.add_outlined,
-                    color: Colors.pink,
-                    size: 20,
-                  ),
-                ),
-                Text(
-                  " Add New",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
-                  ),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
       body: ListView(
         children: [
+          Row(
+            children: const [Header(), Spacer(), AddNew()],
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 12.0),
             child: TextField(
@@ -101,69 +60,129 @@ class HomePage extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           const MyTile(
-            img: "assets/s1mple_image.jpg",
+            img: "assets/images/s1mple_image.jpg",
             isBold: true,
             subtitle: "Good to know",
             title: "Alex",
             trailing: "Today",
           ),
           const MyTile(
-            img: "assets/p9.jpg",
+            img: "assets/images/p9.jpg",
             isBold: false,
             subtitle: "its been a while",
             title: "Sameer",
             trailing: "Today",
           ),
           const MyTile(
-            img: "assets/p1.jpg",
+            img: "assets/images/p1.jpg",
             isBold: false,
             subtitle: "Hey, where are you?",
             title: "Rezi Makarov",
             trailing: "Yesterday",
           ),
           const MyTile(
-            img: "assets/p2.jpg",
+            img: "assets/images/p2.jpg",
             isBold: true,
             subtitle: "Its over!",
             title: "Bob Ryder",
             trailing: "28 Jan",
           ),
           const MyTile(
-            img: "assets/p3.jpg",
+            img: "assets/images/p3.jpg",
             isBold: false,
             subtitle: "Good to know",
             title: "Karrigan",
             trailing: "24 Jan",
           ),
           const MyTile(
-            img: "assets/p4.jpg",
+            img: "assets/images/p4.jpg",
             isBold: false,
             subtitle: "Going Out?",
             title: "Walkins",
             trailing: "19 Jan",
           ),
           const MyTile(
-            img: "assets/p5.jpg",
+            img: "assets/images/p5.jpg",
             isBold: false,
             subtitle: "Attach the image and send it",
             title: "Gilbert",
             trailing: "12 Jan",
           ),
           const MyTile(
-            img: "assets/p6.jpg",
+            img: "assets/images/p6.jpg",
             isBold: true,
             subtitle: "Hey I won the match. Lets party!!",
             title: "Lewis",
             trailing: "10 Jan",
           ),
           const MyTile(
-            img: "assets/p7.jpg",
+            img: "assets/images/p7.jpg",
             isBold: true,
             subtitle: "Sup?",
             title: "Chad",
             trailing: "8 Jan",
           ),
         ],
+      ),
+    );
+  }
+}
+
+class AddNew extends StatelessWidget {
+  const AddNew({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(right: 15, top: 15, bottom: 15, left: 8.0),
+      width: 90,
+      decoration: BoxDecoration(
+        color: Colors.pink[400]?.withOpacity(0.25),
+        borderRadius: BorderRadius.circular(60),
+      ),
+      child: Row(
+        children: const [
+          Padding(
+            padding: EdgeInsets.only(left: 4),
+            child: Icon(
+              Icons.add_outlined,
+              color: Colors.pink,
+              size: 20,
+            ),
+          ),
+          Text(
+            " Add New",
+            style: TextStyle(
+              color: Colors.black,
+              fontWeight: FontWeight.bold,
+              fontSize: 15,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class Header extends StatelessWidget {
+  const Header({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 16.0),
+      child: Text(
+        "Conversations",
+        style: TextStyle(
+          fontFamily: GoogleFonts.lato().fontFamily,
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+          fontSize: 30,
+        ),
       ),
     );
   }
