@@ -13,7 +13,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
         selectedItemColor: Colors.red[400],
+        backgroundColor: Colors.white,
         currentIndex: _index,
         items: [
           BottomNavigationBarItem(

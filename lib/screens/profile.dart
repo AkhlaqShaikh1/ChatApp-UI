@@ -17,7 +17,7 @@ class ProfilePage extends StatelessWidget {
         selectedItemColor: Colors.red[400],
         items: [
           BottomNavigationBarItem(
-            label: "Home",
+            label: "Chats",
             icon: IconButton(
               icon: const Icon(Icons.home),
               onPressed: () {
@@ -56,7 +56,7 @@ class ProfilePage extends StatelessWidget {
             const Center(
               child: CircleAvatar(
                 radius: 120,
-                backgroundImage: AssetImage("assets/p2.jpg"),
+                backgroundImage: AssetImage("assets/images/p2.jpg"),
               ),
             ),
             const TitleWidget(title: "Name"),
