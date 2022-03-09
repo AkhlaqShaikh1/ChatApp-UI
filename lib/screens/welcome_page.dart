@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:rafay_chat_app/screens/home_page.dart';
 import 'package:rafay_chat_app/screens/login_screen.dart';
 
 class WelcomePage extends StatelessWidget {

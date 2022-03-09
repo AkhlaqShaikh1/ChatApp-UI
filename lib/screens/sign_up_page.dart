@@ -25,7 +25,7 @@ class _SignUpPageState extends State<SignUpPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Lottie.asset("assets/signup.json", height: 350),
+              Lottie.asset("assets/animations/signup.json", height: 350),
               const SizedBox(height: 10),
               CustomInputFields(controller: _emailController, text: "Email"),
               CustomInputFields(controller: _nameController, text: "Name"),
