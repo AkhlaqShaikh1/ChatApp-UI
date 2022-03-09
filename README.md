@@ -4,7 +4,7 @@ A Flutter UI for chat app made for assignment purposes
 
 # Preview
 
-![Welcome Screen](assets/screenshots/![Profile Screen](assets/screenshots/Screenshot_20220309-160935.jpg)
+![Welcome Screen](assets/screenshots/Screenshot_20220309-172640.jpg)
 
 ![Login Screen](assets/screenshots/Screenshot_20220309-172646.jpg)
 
